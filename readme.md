@@ -3,16 +3,16 @@
 
 There are five REST APIs defined in this application based on the problem statement-
 1) POST method to create the article 
-   - **https://<server-url>/news/v1/article**
+   - **https://{server-url}/news/v1/article**
 2) PUT method to update the article 
-   - **https://<server-url>/news/v1/article/{articleId}**
+   - **https://{server-url}/news/v1/article/{articleId}**
 3) DELETE method to delete the article 
-   - **https://<server-url>/news/v1/article/{articleId}**
+   - **https://{server-url}/news/v1/article/{articleId}**
 4) GET method to retrieve article using articleId 
-   - **https://<server-url>/news/v1/article/{articleId}**
+   - **https://{server-url}/news/v1/article/{articleId}**
     
 5) GET method to retrieve all articles using filters like author, keyword or a given period 
-   - **https://<server-url>/news/v1/article?author={author}&startDate={startDate}&endDate={endDate}&keyword={keyword}** 
+   - **https://{server-url}/news/v1/article?author={author}&startDate={startDate}&endDate={endDate}&keyword={keyword}** 
    - If no filters are provided, it will retrieve all the articles. 
    - If all filters are provided, it will retrieve the articles based on all the search criteria. 
    - Either one of the query parameter will work or all of them. Permutations of them is not implemented yet.
@@ -37,6 +37,7 @@ Note- A generic custom exception is currently handled(NewsArticleException). As 
 
 Things which are not currently handled in the application(due to time constraint)
 
+- API Documentation using SWAGGER.
 - Authorization & Authentication of API end points. This can be done using OAuth2 implementation.
 - Validation of the request body and parameters passed in the end point.  
 - Pagination for GET methods. As the data grows in the db, it's better to implement pagination so that server is not loaded while retrieving records.
